@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    
+    <link rel="stylesheet" href="https://developers.google.com/maps/documentation/javascript/demos/demos.css">
+    <title>Hello</title>
+</head>
+
+<body background="background_BG.jpg">
+    
+    <center>
+    
+    <div id="header"><h1>地圖</h1></div>
+    
+    <div id="content">
+   <div id="map"></div>
+    <script>
+      function initMap() {
+        var myLatLng = {lat: 24.120011, lng: 120.681165};
+
+        // Create a map object and specify the DOM element for display.
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: myLatLng,
+          scrollwheel: false,
+          zoom: 16
+        });
+
+        // Create a marker and set its position.
+        var marker = new google.maps.Marker({
+          map: map,
+          position: myLatLng,
+          title: 'Hello World!'
+        });
+      }
+
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDq1RVuHwCRQV9z8uNzgAwJx5nSoQT9lG4&callback=initMap"
+        async defer></script>
+    </div>
+        
+        <div id="footer">
+            <br>
+            <br>
+            <button type="button" style="width:25%;height:25%;"onclick="javascript:location.href='300.html'">回上一頁</button>
+        </div>
+        
+    </center>    
+        
+</body>
+
+</html>
